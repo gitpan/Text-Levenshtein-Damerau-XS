@@ -1,0 +1,58 @@
+NAME
+    "Text::Levenshtein::Damerau::XS" - XS Damerau Levenshtein edit distance
+
+SYNOPSIS
+            # Normal usage through Text::Levenshtein::Damerau
+            use Text::Levenshtein::Damerau qw/edistance/;
+            use warnings;
+            use strict;
+
+            print edistance('Neil','Niel');
+            # prints 1
+
+
+
+            # Using this module directly
+            use Text::Levenshtein::Damerau::InlineC qw/xs_distance/;
+            use warnings;
+            use strict;
+
+            print xs_edistance('Neil','Niel');
+            # prints 1
+
+DESCRIPTION
+    Returns the true Damerau Levenshtein edit distance of strings with
+    adjacent transpositions. XS implementation.
+
+METHODS
+EXPORTABLE METHODS
+  xs_edistance
+    Arguments: source string and target string.
+
+    Returns: scalar containing int that represents the edit distance between
+    the two argument.
+
+    Wrapper function to take the edit distance between a source and target
+    string using XS algorithm implementation.
+
+            use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
+            print c_edistance('Neil','Niel');
+            # prints 1
+
+    *   Text::Levenshtein::Damerau
+
+    *   Text::Levenshtein::Damerau::PP
+
+BUGS
+    Please report bugs to:
+
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Dame
+    rau-XS>
+
+AUTHOR
+    ugexe <ug@skunkds.com>
+
+LICENSE AND COPYRIGHT
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
