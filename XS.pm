@@ -4,7 +4,7 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.3';
+$Text::Levenshtein::Damerau::XS::VERSION = '0.4';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
@@ -47,7 +47,7 @@ C<Text::Levenshtein::Damerau::XS> - XS Damerau Levenshtein edit distance
 
 
 	# Using this module directly
-	use Text::Levenshtein::Damerau::XS qw/xs_distance/;
+	use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 	use warnings;
 	use strict;
 
@@ -56,7 +56,11 @@ C<Text::Levenshtein::Damerau::XS> - XS Damerau Levenshtein edit distance
 
 =head1 DESCRIPTION
 
-Returns the true Damerau Levenshtein edit distance of strings with adjacent transpositions. L<XS> implementation.
+Returns the true Damerau Levenshtein edit distance of strings with adjacent transpositions. L<XS> implementation. Works correctly with utf8.
+
+	use utf8;
+	xs_edistance('ⓕⓞⓤⓡ','ⓕⓤⓞⓡ'), 
+	# prints 1
 
 =head1 METHODS
 
@@ -90,7 +94,7 @@ L<https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS>
 
 =head1 AUTHOR
 
-ugexe <F<ug@skunkds.com>>
+Nick Logan <F<ug@skunkds.com>>
 
 =head1 LICENSE AND COPYRIGHT
 

@@ -1,11 +1,14 @@
-Changes
-Makefile.PL
 MANIFEST
+Changes
+XS.pm
+XS.xs
+Makefile.PL
+LICENSE
+MYMETA.json
+MYMETA.yml
 t/00_compile.t
 t/01_imports.t
 t/02_xs_edistance.t
 t/pod.t
-XS.pm
-XS.xs
-LICENSE
+
 
