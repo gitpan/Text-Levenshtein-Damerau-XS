@@ -5,15 +5,12 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.10';
+$Text::Levenshtein::Damerau::XS::VERSION = '0.11';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
 @Text::Levenshtein::Damerau::XS::EXPORT = ();
-@Text::Levenshtein::Damerau::XS::EXPORT_OK = qw(
-    _xs_edistance
-    xs_edistance
-   );
+@Text::Levenshtein::Damerau::XS::EXPORT_OK = qw/xs_edistance/);
 
 sub xs_edistance {
 
@@ -23,7 +20,7 @@ sub xs_edistance {
     my @arr1 = unpack 'U*', $str1;
     my @arr2 = unpack 'U*', $str2;
 
-    return _xs_edistance( \@arr1, \@arr2 );
+    return Text::Levenshtein::Damerau::XS::raw_xs_edistance( \@arr1, \@arr2 );
 }
 
 sub dl_load_flags {0} 

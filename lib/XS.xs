@@ -10,7 +10,7 @@
         return 0; 
     }
 
-    int _xs_edistance (AV* arraySource, AV* arrayTarget) { 
+    int raw_xs_edistance (AV* arraySource, AV* arrayTarget) { 
             int i;
         int j;
           int lenSource = av_len(arraySource) ? av_len(arraySource) + 1 : 0;

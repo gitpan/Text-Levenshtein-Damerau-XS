@@ -9,5 +9,6 @@ auto_set_repository;
 auto_license;
 
 test_requires 'Test::More';
- 
+requires 'XS';
+
 WriteAll();

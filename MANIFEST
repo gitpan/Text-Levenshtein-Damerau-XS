@@ -13,6 +13,7 @@ inc/Module/Install/WriteAll.pm
 lib/XS.pm
 lib/XS.xs
 LICENSE
+Makefile
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
@@ -25,4 +26,3 @@ t/01_imports.t
 t/02_xs_edistance.t
 t/pod.t
 t/pod_coverage.t
-

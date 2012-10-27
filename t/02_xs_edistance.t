@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use Test::More tests => 14;
-use Text::Levenshtein::Damerau::XS qw/xs_edistance/;;
+use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 
 is( xs_edistance('four','four'), 0, 'test xs_edistance matching');
 is( xs_edistance('four','for'), 1, 'test xs_edistance insertion');
