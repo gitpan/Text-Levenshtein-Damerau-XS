@@ -2,6 +2,7 @@
 #include "perl.h"
 #include "XSUB.h"
 
+
     int _is_empty (char * text) { 
         if ( strcmp(text, "") == 0 ) {
             return 1; 
@@ -10,7 +11,7 @@
         return 0; 
     }
 
-    int raw_xs_edistance (AV* arraySource, AV* arrayTarget) { 
+    int cxs_edistance (AV* arraySource, AV* arrayTarget) { 
             int i;
         int j;
           int lenSource = av_len(arraySource) ? av_len(arraySource) + 1 : 0;
@@ -122,6 +123,7 @@
             return m; 
         } 
     }
+
 MODULE = Text::Levenshtein::Damerau::XS	PACKAGE = Text::Levenshtein::Damerau::XS	
 
 PROTOTYPES: DISABLE
@@ -132,7 +134,7 @@ _is_empty (text)
 	char *	text
 
 int
-_xs_edistance (arraySource, arrayTarget)
+cxs_edistance (arraySource, arrayTarget)
 	AV *	arraySource
 	AV *	arrayTarget
 

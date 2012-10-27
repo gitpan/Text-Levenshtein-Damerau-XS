@@ -1,13 +1,14 @@
-use inc::Module::Install; 
+use ExtUtils::MakeMaker;
+my %options = %{
+{
+  'TYPEMAPS' => [],
+  'NAME' => 'Text::Levenshtein::Damerau::XS',
+  'INC' => '',
+  'VERSION' => '0.20',
+  'AUTHOR' => 'ugexe',
+}
+};
+WriteMakefile(%options);
 
-name          	'Text-Levenshtein-Damerau-XS';
-all_from      	'lib/XS.pm';
-readme_from 		'lib/XS.pm', 1;
-
-auto_manifest;
-auto_set_repository;
-auto_license;
-
-test_requires 'Test::More';
-
-WriteAll();
+# Remove the Makefile dependency. Causes problems on a few systems.
+sub MY::makefile { '' }
