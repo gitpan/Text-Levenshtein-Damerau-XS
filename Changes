@@ -1,6 +1,6 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
-0.11 Fri Oct 26 17:39:51 2012
+0.12 Fri Oct 26 17:39:51 2012
 	- Fixed problem installing from cpan
 
 
