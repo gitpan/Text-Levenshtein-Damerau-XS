@@ -4,7 +4,7 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.20';
+$Text::Levenshtein::Damerau::XS::VERSION = '0.3';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
@@ -47,7 +47,7 @@ C<Text::Levenshtein::Damerau::XS> - XS Damerau Levenshtein edit distance
 
 
 	# Using this module directly
-	use Text::Levenshtein::Damerau::InlineC qw/xs_distance/;
+	use Text::Levenshtein::Damerau::XS qw/xs_distance/;
 	use warnings;
 	use strict;
 
