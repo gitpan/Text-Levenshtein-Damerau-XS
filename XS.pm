@@ -4,7 +4,7 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.4';
+$Text::Levenshtein::Damerau::XS::VERSION = '0.5';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
@@ -29,6 +29,8 @@ sub xs_edistance {
 1;
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
@@ -94,7 +96,7 @@ L<https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS>
 
 =head1 AUTHOR
 
-Nick Logan <F<ug@skunkds.com>>
+Nick Logan ugexe <F<ug@skunkds.com>>
 
 =head1 LICENSE AND COPYRIGHT
 

@@ -4,7 +4,7 @@ my %options = %{
   'TYPEMAPS' => [],
   'NAME' => 'Text::Levenshtein::Damerau::XS',
   'INC' => '',
-  'VERSION' => '0.4',
+  'VERSION' => '0.5',
   'AUTHOR' => 'ugexe',
 }
 };
