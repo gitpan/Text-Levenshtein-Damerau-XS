@@ -4,7 +4,7 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.5';
+$Text::Levenshtein::Damerau::XS::VERSION = '0.6';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
@@ -58,7 +58,7 @@ C<Text::Levenshtein::Damerau::XS> - XS Damerau Levenshtein edit distance
 
 =head1 DESCRIPTION
 
-Returns the true Damerau Levenshtein edit distance of strings with adjacent transpositions. L<XS> implementation. Works correctly with utf8.
+Returns the true Damerau Levenshtein edit distance of strings with adjacent transpositions. C<XS> implementation. Works correctly with utf8.
 
 	use utf8;
 	xs_edistance('ⓕⓞⓤⓡ','ⓕⓤⓞⓡ'), 
@@ -79,6 +79,8 @@ Wrapper function to take the edit distance between a source and target string us
 	use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 	print xs_edistance('Neil','Niel');
 	# prints 1
+
+=head1 SEE ALSO
 
 =over 4
 
