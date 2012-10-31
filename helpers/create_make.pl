@@ -1,7 +1,30 @@
-#include "EXTERN.h"
-#include "perl.h"
-#include "XSUB.h"
+use warnings;
+use strict;
+use InlineX::C2XS qw(c2xs);
+my $mod = 'Text::Levenshtein::Damerau::XS';
+my $pkg = $mod;
+my $build_dir = "../";
+my $hashref = {
+		 VERSION 		=> 0.7,
+               DIST		 	=> 1,
+		 EXPORT_OK_ALL	=> 1,
+		 LICENSE		=> 'perl',
+               CODE			=> &return_code
+		};
 
+
+
+c2xs($mod, $pkg, $build_dir, $hashref);
+
+
+1;
+
+
+
+sub return_code {
+ #Return the Inline C code in a string
+
+ return '
 #define MIN(a,b) (((a)<(b))?(a):(b))
 
 int cxs_edistance (AV* arraySource, AV* arrayTarget) { 
@@ -28,10 +51,10 @@ int cxs_edistance (AV* arraySource, AV* arrayTarget) {
             if (i <= lenTarget && areEqual == 1) {
                 SV** elem2 = av_fetch(arrayTarget, i - 1, 0);
                 int retval2 = SvNV(*elem2);
-                if (elem2 != NULL) {
+                if (elem2 != NULL && retval2 != NULL) {
                     if (retval2 != retval) {
                         areEqual = 0;
-                    } 
+                    }
                 }
             }
             else {
@@ -107,13 +130,8 @@ int cxs_edistance (AV* arraySource, AV* arrayTarget) {
 
     return H[lenSource + 1][lenTarget + 1];
 }
+'; #END OF CODE STRING
 
-MODULE = Text::Levenshtein::Damerau::XS	PACKAGE = Text::Levenshtein::Damerau::XS	
+}
 
-PROTOTYPES: DISABLE
-
-int
-cxs_edistance (arraySource, arrayTarget)
-	AV *	arraySource
-	AV *	arrayTarget
-
+__END__

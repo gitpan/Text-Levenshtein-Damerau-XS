@@ -1,5 +1,9 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
+0.7 Tue Oct 30 20:11:42 2012
+	- Fixed pointer/int comparison warning
+	- Documentation updates
+
 0.6 Sat Oct 27 23:31:13 2012
 	- Document updates
 
