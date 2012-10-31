@@ -1,12 +1,12 @@
 {
    "abstract" : "unknown",
    "author" : [
-      "unknown"
+      "ugexe"
    ],
    "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.112150",
    "license" : [
-      "perl_5"
+      "perl"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -16,7 +16,6 @@
    "no_index" : {
       "directory" : [
          "t",
-         "inc"
       ]
    },
    "prereqs" : {
@@ -35,5 +34,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.7"
+   "version" : "0.8"
 }

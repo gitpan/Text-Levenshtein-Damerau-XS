@@ -1,5 +1,9 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
+0.7 Tue Oct 30 22:13:38 2012
+	- Optimized memory usage
+	- License set to perl in metas instead of LICENSE file only
+
 0.7 Tue Oct 30 20:11:42 2012
 	- Fixed pointer/int comparison warning
 	- Documentation updates

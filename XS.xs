@@ -2,16 +2,16 @@
 #include "perl.h"
 #include "XSUB.h"
 
+int cxs_edistance (AV* arraySource, AV* arrayTarget) { 
 #define MIN(a,b) (((a)<(b))?(a):(b))
 
-int cxs_edistance (AV* arraySource, AV* arrayTarget) { 
     int i;
     int j;
     int lenSource = av_len(arraySource) ? av_len(arraySource) + 1 : 0;
     int lenTarget = av_len(arrayTarget) ? av_len(arrayTarget) + 1 : 0;
     int areEqual = 1;
     int INF = 1;
-
+    int retval_total = 0;
     int arrJoined [lenSource + lenTarget];
     int arrSource [ lenSource ];
     int arrTarget [ lenTarget ];
@@ -23,6 +23,7 @@ int cxs_edistance (AV* arraySource, AV* arrayTarget) {
         if (elem != NULL) {
             arrJoined[ INF ] = retval;
             arrSource[ i ] = retval;
+	     retval_total = retval_total + retval;
             INF++;
                     
             if (i <= lenTarget && areEqual == 1) {
@@ -45,6 +46,7 @@ int cxs_edistance (AV* arraySource, AV* arrayTarget) {
         if (elem != NULL) {
             arrJoined[ INF ] = retval;
             arrTarget[ i ] = retval;
+	     retval_total = retval_total + retval;
             INF++;
         }
     }
@@ -76,8 +78,8 @@ int cxs_edistance (AV* arraySource, AV* arrayTarget) {
         H[1][j + 1] = j; 
         H[0][j + 1] = INF; 
     }
-
-    int sd[30000]; 
+ 
+    int sd[retval_total]; 
 
     i = 0;
     for (i = 1; i < INF; i++) { 
@@ -116,4 +118,5 @@ int
 cxs_edistance (arraySource, arrayTarget)
 	AV *	arraySource
 	AV *	arrayTarget
+
 

@@ -1,7 +1,7 @@
 ---
 abstract: unknown
 author:
-  - unknown
+  - ugexe
 build_requires:
   ExtUtils::MakeMaker: 0
 configure_requires:
@@ -16,6 +16,5 @@ name: Text-Levenshtein-Damerau-XS
 no_index:
   directory:
     - t
-    - inc
 requires: {}
-version: 0.7
+version: 0.8

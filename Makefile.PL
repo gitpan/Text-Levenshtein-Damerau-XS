@@ -4,8 +4,7 @@ my %options = %{
   'TYPEMAPS' => [],
   'NAME' => 'Text::Levenshtein::Damerau::XS',
   'INC' => '',
-  'VERSION' => '0.7',
-  'LICENSE' => 'perl',
+  'VERSION' => '0.8'
 }
 };
 WriteMakefile(%options);
