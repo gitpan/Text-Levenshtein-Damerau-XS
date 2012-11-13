@@ -1,10 +1,14 @@
 use ExtUtils::MakeMaker;
+
+my $pm = 'lib/Text/Levenshtein/Damerau/XS.pm';
+
 my %options = %{
 {
   'TYPEMAPS' => [],
   'NAME' => 'Text::Levenshtein::Damerau::XS',
   'INC' => '',
-  'VERSION' => '0.8'
+  'VERSION_FROM' => $pm,
+  'LICENSE' => 'perl',
 }
 };
 WriteMakefile(%options);

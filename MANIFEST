@@ -1,11 +1,9 @@
 MANIFEST
-Changes
-LICENSE
-MYMETA.json
-MYMETA.yml
 XS.pm
 XS.xs
 Makefile.PL
+LICENSE
+Changes
 t/00_compile.t
 t/01_imports.t
 t/02_xs_edistance.t

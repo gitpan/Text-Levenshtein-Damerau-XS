@@ -1,6 +1,11 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
-0.7 Tue Oct 30 22:13:38 2012
+0.9 Wed Nov 13 17:34:19 2012
+	- max distance added to stop calculations at a certain distance
+	- Code rehauled, thanks homercles
+	- count[30000] (dictionary) replaced with linked list
+
+0.8 Tue Oct 30 22:13:38 2012
 	- Optimized memory usage
 	- License set to perl in metas instead of LICENSE file only
 
