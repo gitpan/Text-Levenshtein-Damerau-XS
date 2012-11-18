@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
-my $pm =   'XS.pm';
+my $pm =   'lib/Text/Levenshtein/Damerau/XS.pm';
 my $bugs = 'https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS';
 
 WriteMakefile (

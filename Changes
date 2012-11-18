@@ -1,5 +1,8 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
+1.1 Sun Nov 18 18:47:43 2012
+	- Moved XS.pm to lib/Text/Levenshtein/Damerau/XS.pm
+
 1.0 Sun Nov 18 18:15:17 2012
 	- Moved pod tests to /xt
 	- Doc updates
