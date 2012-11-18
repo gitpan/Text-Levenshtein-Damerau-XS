@@ -4,6 +4,10 @@
  
 #define MIN(a,b) (((a)<(b))?(a):(b))
  
+
+/* Our unsorted dictionary/hash tracker. */
+/* Note we use character ints, not chars */
+
 struct dictionary{
   int key;
   unsigned int value;
@@ -43,7 +47,13 @@ static item* find(item* head,unsigned int key){
   return NULL;
 }
 
+/* End of Dictionary Stuff */
+
+
+
  
+/* All calculations/work are done here */
+
 static int scores(int src[],int tgt[],unsigned int ax,unsigned int ay,unsigned int maxDistance){
   unsigned int i,j;
   unsigned int scores[ax+2][ay+2];
@@ -88,6 +98,9 @@ static int scores(int src[],int tgt[],unsigned int ax,unsigned int ay,unsigned i
       scores[i+1][j+1] = MIN(scores[i+1][j+1], scores[i1][j1] + i - i1 - 1 + j - j1);
     }
 
+
+    /* We will give up here if the */
+    /* current score > maxDistance */
     if(maxDistance != 0 && maxDistance < scores[i+1][ay+1]) {
        dict_free(head); 
 	return -1;
@@ -98,7 +111,12 @@ static int scores(int src[],int tgt[],unsigned int ax,unsigned int ay,unsigned i
 
   return scores[ax+1][ay+1];
 }
- 
+
+
+
+
+/* For passing in Perl data types and converting to C */
+
 static int cxs_edistance (AV* arraySource, AV* arrayTarget, SV* maxDistance) {
     unsigned int i,j;
     unsigned int lenSource = av_len(arraySource)+1;

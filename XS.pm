@@ -4,7 +4,7 @@ require Exporter;
 *import = \&Exporter::import;
 require DynaLoader;
 
-$Text::Levenshtein::Damerau::XS::VERSION = '0.9';
+$Text::Levenshtein::Damerau::XS::VERSION = '1.0';
 
 DynaLoader::bootstrap Text::Levenshtein::Damerau::XS $Text::Levenshtein::Damerau::XS::VERSION;
 
@@ -37,21 +37,10 @@ sub xs_edistance {
 
 =head1 NAME
 
-C<Text::Levenshtein::Damerau::XS> - XS Damerau Levenshtein edit distance
+Text::Levenshtein::Damerau::XS - XS Damerau Levenshtein edit distance.
 
 =head1 SYNOPSIS
 
-	# Normal usage through Text::Levenshtein::Damerau
-	use Text::Levenshtein::Damerau qw/edistance/;
-	use warnings;
-	use strict;
-
-	print edistance('Neil','Niel');
-	# prints 1
-
-
-
-	# Using this module directly
 	use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 	use warnings;
 	use strict;
@@ -91,13 +80,16 @@ Arguments: source string and target string.
 
 =back
 
-Returns: scalar containing int that represents the edit distance between the two argument.
+Returns: int that represents the edit distance between the two argument. Stops calculations and returns -1 if max distance is set and reached.
 
 Wrapper function to take the edit distance between a source and target string using XS algorithm implementation.
 
 	use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 	print xs_edistance('Neil','Niel');
 	# prints 1
+
+	print xs_edistance('Neil','Nielx',1);
+	# prints -1
 
 =head1 SEE ALSO
 
@@ -117,7 +109,7 @@ L<https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS>
 
 =head1 AUTHOR
 
-Nick Logan (ugexe) <F<ug@skunkds.com>>
+Nick Logan <F<ug@skunkds.com>>
 
 =head1 LICENSE AND COPYRIGHT
 

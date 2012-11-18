@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 15;
+use Test::More tests => 16;
 use Text::Levenshtein::Damerau::XS qw/xs_edistance/;
 
 
@@ -14,6 +14,7 @@ is( xs_edistance('four',''), 	4, 'test xs_edistance target empty');
 is( xs_edistance('','four'), 	4, 'test xs_edistance source empty');
 is( xs_edistance('',''), 		0, 'test xs_edistance source and target empty');
 is( xs_edistance('xxx','x',1),    -1, 'test xs_edistance max distance setting');
+is( xs_edistance('xxx','xx',1),    1, 'test xs_edistance max distance setting');
 
 
 # Test some utf8
