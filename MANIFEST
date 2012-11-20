@@ -6,13 +6,13 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 MYMETA.json
 MYMETA.yml
+README
 t/00_compile.t
 t/01_imports.t
 t/02_xs_edistance.t
 XS.bs
 XS.c
 XS.o
-XS.pm
 XS.xs
 xt/pod.t
 META.yml                                 Module YAML meta-data (added by MakeMaker)
