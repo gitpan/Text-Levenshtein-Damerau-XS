@@ -22,6 +22,7 @@ WriteMakefile (
             bugtracker => "$bugs",
         },
     },
+    depend => { '$(FIRST_MAKEFILE)' => '$(VERSION_FROM)' },
 );
 
 

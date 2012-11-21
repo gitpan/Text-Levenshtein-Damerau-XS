@@ -22,4 +22,4 @@ requires:
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS
   repository: https://github.com/ugexe/Text--Levenshtein--Damerau--XS
-version: 1.2
+version: 1.3
