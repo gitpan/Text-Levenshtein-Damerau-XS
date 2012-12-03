@@ -1,5 +1,8 @@
 Revision history for Perl module Text::Levenshtein::Damerau::XS
 
+1.5 Mon Dec 03 16:01:11
+	- Removed MIN_PERL_VERSION from makefile, fixing netbsd error
+
 1.4 Wed Nov 21 21:01:05
 	- XS more XSish and less Cish
 	- Memory usage improved

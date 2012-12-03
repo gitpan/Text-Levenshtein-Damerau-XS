@@ -31,9 +31,7 @@
          }
       },
       "runtime" : {
-         "requires" : {
-            "perl" : 0
-         }
+         "requires" : {}
       }
    },
    "release_status" : "stable",
@@ -45,5 +43,5 @@
          "url" : "https://github.com/ugexe/Text--Levenshtein--Damerau--XS"
       }
    },
-   "version" : "1.4"
+   "version" : "1.5"
 }
