@@ -1,4 +1,4 @@
-use 5.8.8;
+use 5.008_008;
 use strict;
 use warnings;
 use ExtUtils::MakeMaker;
@@ -13,6 +13,7 @@ WriteMakefile (
     ABSTRACT_FROM => $pm,
     AUTHOR => 'Nick Logan <ug@skunkds.org>',
     LICENSE => 'perl',
+    MIN_PERL_VERSION => '5.008008',
     PREREQ_PM => {
     },
     META_MERGE => {
