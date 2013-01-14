@@ -14,6 +14,7 @@ struct dictionary{
 };
 typedef struct dictionary item;
 
+
 static __inline item* push(unsigned int key,item* curr){
   item* head;
   head = malloc(sizeof(item));   
@@ -38,7 +39,6 @@ static __inline item* find(item* head,unsigned int key){
 
 static __inline item* uniquePush(item* head,unsigned int key){
   item* iterator = head;
-  int key_found = 0;
 
   while(iterator){
     if(iterator->key == key){
@@ -121,8 +121,10 @@ static int distance(unsigned int src[],unsigned int tgt[],unsigned int x,unsigne
     find(head,src[i-1])->value = i;
   }
 
+  {
   unsigned int score = scores[(x+1) * (y + 2) + (y + 1)];
   dict_free(head);
   free(scores);
   return score;
+  }
 }
