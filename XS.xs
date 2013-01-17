@@ -3,14 +3,13 @@
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
-
-
 #include "damerau-int.c"
 
-/* use the system malloc, free, and alloca */
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
+/* use the system malloc and free */
 #undef malloc
 #undef free
-#undef alloca
 
 MODULE = Text::Levenshtein::Damerau::XS    PACKAGE = Text::Levenshtein::Damerau::XS
 

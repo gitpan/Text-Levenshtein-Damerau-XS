@@ -1,7 +1,7 @@
 ---
 abstract: 'XS Damerau Levenshtein edit distance.'
 author:
-  - 'Nick Logan <ug@skunkds.org>'
+  - 'Nick Logan <ugexe@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 0
 configure_requires:
@@ -22,4 +22,4 @@ requires:
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS
   repository: https://github.com/ugexe/Text--Levenshtein--Damerau--XS
-version: 2.4
+version: 2.5

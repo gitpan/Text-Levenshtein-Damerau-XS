@@ -1,7 +1,7 @@
 {
    "abstract" : "XS Damerau Levenshtein edit distance.",
    "author" : [
-      "Nick Logan <ug@skunkds.org>"
+      "Nick Logan <ugexe@cpan.org>"
    ],
    "dynamic_config" : 1,
    "generated_by" : "ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.112150",
@@ -45,5 +45,5 @@
          "url" : "https://github.com/ugexe/Text--Levenshtein--Damerau--XS"
       }
    },
-   "version" : "2.4"
+   "version" : "2.5"
 }
