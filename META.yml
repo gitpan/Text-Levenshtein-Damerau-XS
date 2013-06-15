@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 0
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.120921'
+generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,10 +20,10 @@ no_index:
 provides:
   Text::Levenshtein::Damerau::XS:
     file: lib/Text/Levenshtein/Damerau/XS.pm
-    version: 2.9
+    version: 3.0
 requires:
   perl: 5.008008
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Text-Levenshtein-Damerau-XS
   repository: https://github.com/ugexe/Text--Levenshtein--Damerau--XS
-version: 2.9
+version: 3.0

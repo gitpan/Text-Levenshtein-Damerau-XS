@@ -111,7 +111,7 @@ static int distance(unsigned int src[],unsigned int tgt[],unsigned int x,unsigne
     //  dict_free(head);
     //  free(scores);
     //  return -1;
-   // }
+    //}
 
     find(head,src[i-1])->value = i;
   }
@@ -120,6 +120,6 @@ static int distance(unsigned int src[],unsigned int tgt[],unsigned int x,unsigne
   unsigned int score = scores[(x+1) * (y + 2) + (y + 1)];
   dict_free(head);
   free(scores);
-  return (maxDistance !=0 && score>maxDistance)?-1:score;
+  return (maxDistance != 0 && maxDistance < score)?(-1):score;
   }
 }

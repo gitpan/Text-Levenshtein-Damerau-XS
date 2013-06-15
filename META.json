@@ -4,7 +4,7 @@
       "Nick Logan <ugexe@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -39,7 +39,7 @@
    "provides" : {
       "Text::Levenshtein::Damerau::XS" : {
          "file" : "lib/Text/Levenshtein/Damerau/XS.pm",
-         "version" : "2.9"
+         "version" : "3.0"
       }
    },
    "release_status" : "stable",
@@ -51,5 +51,5 @@
          "url" : "https://github.com/ugexe/Text--Levenshtein--Damerau--XS"
       }
    },
-   "version" : "2.9"
+   "version" : "3.0"
 }
